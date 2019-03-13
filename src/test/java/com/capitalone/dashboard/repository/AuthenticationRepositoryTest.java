@@ -69,7 +69,8 @@ public class AuthenticationRepositoryTest extends FongoBaseRepositoryTest {
 
 	@Test
 	public void verifyExistingWithNewPasswords() throws Exception {
-		String username = "username" + System.currentTimeMillis();
+		// changed name as may already be used if done in parallel or at same millis
+		String username = "another_username" + System.currentTimeMillis();
 
 		Authentication user1 = new Authentication(username, "pass1");
 
